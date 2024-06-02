@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <div class="loading-bar"></div>
+    </div>
+    <div id="content">
+        <!-- Your website content goes here -->
+        <nav id="navbar">
+            <div class="logo">
+                <a href="index.html">Joeberg Technical Services</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <script>
+                const burger = document.querySelector('.burger');
+                const navLinks = document.querySelector('.nav-links');
+                const body = document.querySelector('body');
+                const backdrop = document.createElement('div');
+                backdrop.classList.add('menu-backdrop');
+            
+                body.appendChild(backdrop);
+            
+                burger.addEventListener('click', () => {
+                    navLinks.classList.toggle('nav-active');
+                    backdrop.classList.toggle('display'); // Show or hide the backdrop
+            
+                    // Toggle body scrolling
+                    body.classList.toggle('fixed-position');
+                    
+                    // Burger Animation
+                    burger.classList.toggle('toggle');
+                });
+            
+                backdrop.addEventListener('click', function() {
+                    navLinks.classList.remove('nav-active');
+                    this.classList.remove('display'); // Hide the backdrop when clicked
+                    body.classList.remove('fixed-position');
+                    burger.classList.remove('toggle');
+                });
+            </script>
+        </nav>
+        <header>
+            <h1>Products Page</h1>
+            <div id="searchContainer">
+                <input type="text" id="searchBar" placeholder="Search for products...">
+                <button id="searchButton" onclick="searchProducts()">
+                    <img src="imgs/search-svgrepo-com (2).png" alt="Search">
+                </button>
+            </div>
+        </header>
+        <main>
+            <div id="productsContainer"></div>
+        </main>
+        <button id="viewCartButton" onclick="toggleCart()">View Cart</button>
+        <div id="cartOverlay">
+            <div id="cartFormContainer">
+                <button id="closeCartButton" onclick="toggleCart()">X</button>
+                <form id="cartForm" action="https://submit-form.com/Hr9AOpsaE" method="POST" onsubmit="prepareCartItems()">
+                    <h2>Your Cart</h2>
+                    <h4>Please input your information to request the quotation</h4>
+                    <br>
+                    <h3>Your Items:</h3>
+                    <div id="cartItems"></div>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                    <div id="hiddenCartItems"></div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        <h1 style="text-align:center; color: white;">P.S: If you cannot find what you are looking for reach out to us <a href="contact.html" style="color: #ffd030;">here</a></h1>
+ <!-- Footer Section -->
+ <footer>
+   
+    <div class="footer-container">
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://wa.me/+2348033099465" target="_blank" class="social-icon whatsapp"><i class="fa fa-whatsapp"></i></a>
+            <a href="mailto:joeberg4@yahoo.com" target="_blank" class="social-icon email"><i class="fa fa-envelope"></i></a>
+            <a href="tel:+2348033099465" class="social-icon phone"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<script>
+// scripts.js
+document.addEventListener("DOMContentLoaded", function() {
+var loading = document.getElementById('loading');
+var content = document.getElementById('content');
+
+// Simulate a loading delay of 3 seconds
+setTimeout(function() {
+// Hide the loading screen
+loading.style.display = 'none';
+
+// Show the main content
+content.style.display = 'block';
+}, 3000); // 3000 milliseconds = 5 seconds
+});
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
