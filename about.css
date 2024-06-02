@@ -1,0 +1,391 @@
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Exo", sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: #161616;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.956);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.burger {
+    display: none;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-links a:focus,
+.nav-links a:hover {
+     /* Adds a hover and focus effect for better visual feedback */
+    color: #FFD039;
+    transform: scale(1.3);
+  transition: 0.3s;
+}
+.menu-backdrop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9; /* Ensure it's below the nav-links but above other content */
+}
+.fixed-position {
+    overflow: hidden;
+    height: 100%;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.aboutheader{
+    color: white;
+    padding: 90px;
+    text-align: center;
+    background-image: url(imgs/products.jpg);
+    background-size: cover;
+}
+.aboutcont{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 40px;
+    color: white;
+}
+.abouttext, .aboutpic{
+    width: 50%;
+    padding: 0px 20px;
+}
+.abouttext p{
+    font-size: 19px;
+}
+.values{
+    padding: 30px;
+    color: white;
+
+}
+.values h1, .p{
+    text-align: center;
+}
+.p{
+    font-size: 19px;
+    font-weight: 600;
+    width: 60%;
+    margin: auto;
+}
+.valuescont{
+    display: flex;
+}
+.valuespic, .valuestext{
+    width: 50%;
+    padding: 0px 20px;
+}
+.subval{
+    display: flex;
+}
+.subval span{
+    font-size: 22px;
+    font-weight: 800;
+    padding-left: 4px;
+}
+
+.ethicscont{
+    padding: 30px 70px;
+}
+.ethics{
+    padding: 30px;
+    background-image: url(imgs/3259111.jpg);
+    background-size: cover;
+}
+.ethics p, li{
+    font-size: 19px;
+    font-weight: 600;
+}
+.ethics h2{
+    font-size: 29px;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgba(0, 0, 0, 0.956);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        font-size: 38px;
+        z-index: 99;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .nav-links li {
+        animation: navLinkFade 0.5s ease forwards 0.5s;
+    }
+    .aboutcont, .valuescont{
+        display: block;
+    }
+    .abouttext, .aboutpic, .valuespic{
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .p{
+        width: 100%;
+    }
+    .valuestext{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0px 5px;
+    }
+    .subval{
+        width: 100%;
+    }
+    .subval span{
+        font-size: 16px;
+        font-weight: 800;
+        padding-left: 4px;
+    }
+    .ethicscont{
+        padding: 10px;
+    }
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #000;
+    color: #FFD039;
+    font-size: 20px;
+    text-decoration: none;
+    border: 2px solid #FFD039;
+}
+
+.social-icon:hover {
+    color: #000;
+    background-color: #FFD039;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000; /* Dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid yellow;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    background: linear-gradient(45deg, yellow, black);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: yellow;
+    animation: load 3s linear forwards;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#content {
+    display: none;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Joeberg Global Services</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+</head>
+<body>
+
+    <div id="loading">
+        <div class="spinner"></div>
+        <div class="loading-bar"></div>
+    </div>
+    <div id="content">
+        <nav id="navbar">
+            <div class="logo">
+                <a href="index.html">Joeberg Technical Services</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <script>
+                const burger = document.querySelector('.burger');
+                const navLinks = document.querySelector('.nav-links');
+                const body = document.querySelector('body');
+                const backdrop = document.createElement('div');
+                backdrop.classList.add('menu-backdrop');
+            
+                body.appendChild(backdrop);
+            
+                burger.addEventListener('click', () => {
+                    navLinks.classList.toggle('nav-active');
+                    backdrop.classList.toggle('display'); // Show or hide the backdrop
+            
+                    // Toggle body scrolling
+                    body.classList.toggle('fixed-position');
+                    
+                    // Burger Animation
+                    burger.classList.toggle('toggle');
+                });
+            
+                backdrop.addEventListener('click', function() {
+                    navLinks.classList.remove('nav-active');
+                    this.classList.remove('display'); // Hide the backdrop when clicked
+                    body.classList.remove('fixed-position');
+                    burger.classList.remove('toggle');
+                });
+            </script>
+        </nav>
+        
+        <br>
+        <div class="aboutheader">
+            <h1>About Joeberg...</h1>
+        </div>
+        
+        
+        <div class="aboutcont">
+            <div class="abouttext">
+                <p>
+                    Welcome to Joeberg Global Services, your go-to for top-tier swamp buggies, excavators, and heavy equipment solutions. We excel in selling, manufacturing, and renting robust machinery designed for the toughest environments. Our commitment to quality and innovation ensures you receive the best products and services in the industry.
+                </p>
+                <br>
+                <p>
+                    At Joeberg Global Services, we manufacture high-performance swamp buggies and excavators using cutting-edge technology. Our expert team ensures every piece of equipment meets the highest standards of durability and efficiency. We also offer a wide range of parts, so your machinery stays operational with minimal downtime.
+                </p>
+                <br>
+                <p>
+                    Beyond sales and manufacturing, Joeberg Global Services offers flexible and cost-effective equipment rental options. Whether you need an excavator for a short-term project or a long-term solution, our well-maintained fleet is ready to meet your needs. Trust us for reliable machinery and exceptional customer support.
+                </p>
+            </div>
+            <div class="aboutpic">
+                <img src="imgs/aboutpc.jpg" width="100%" alt="">
+            </div>
+        </div>
+        
+        <div class="values">
+            <h1>Our Values</h1>
+            <p class="p">
+                At Joeberg Global, we prioritize quality, innovation, and customer satisfaction. We maintain integrity, safety, and sustainability in all our operations, ensuring reliable and ecofriendly solutions.
+                Our collaborative team environment drives us to exceed industry standards and deliver exceptional services.
+            </p>
+        <br><br>
+            <div class="valuescont">
+                <div class="valuespic">
+                    <img src="imgs/pexels-emmages-8005396.jpg" width="100%" alt="">
+                </div>
+                <div class="valuestext">
+                    <p>
+                        We want to work with our clients in mind, meet and understand their special needs. We want to build loyalty in Joeberg Global by being our customers’ one-stop reliable supplier, the one they always trust. We will do this by:
+                    </p>
+        
+                    <br>
+                    <div class="subval">
+                            <img src="imgs/company-cooperation-group-svgrepo-com.png" width="20%" alt="">
+                            <span>
+                                Being flexible and easy to work with – this means being adaptable, compassionate, proactive, and competitive.
+                            </span>
+                    </div>
+                    <br>
+                    <div class="subval">
+                        <img src="imgs/hand-money-cash-hold-svgrepo-com.png" width="20%" alt="">
+                        <span>
+                            Creating new relationships and strengthening current relationships – this means being friendly, trustworthy, and engaging.
+                        </span>
+                </div>
+                <br>
+                <div class="subval">
+                    <img src="imgs/company-cooperation-organize-svgrepo-com (1).png" width="20%" alt="">
+                    <span>
+                        <br>
+                        Doing what we say – this means being honest and reliable.
+                    </span>
+            </div>
+            <br>
+            <div class="subval">
+                <img src="imgs/work-together-collaborate-co-operate-join-forces-svgrepo-com (1).png" width="20%" alt="">
+                <span>
+                    Working collectively to drive changes – with effectiveness and enthusiasm that stimulate service and product development.
+                </span>
+        </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        
+        <div class="ethicscont">
+            <div class="ethics">
+                <h2>Ethics & Compliance</h2>
+                <br>
+                <p>
+                    Managing business ethically is important to the long-term success of our company. The basis of our ethical culture, here at Joeberg Global, is the Code of Ethical Business Conduct. We demand that our employees and directors take a great responsibility to do what’s right. This means more than just complying with regulations and laws. This means the following:
+                </p>
+                <br>
+                <ol style="list-style-type: disc;">
+                    <li>Taking responsibility for the safety of ourselves and others;</li>
+                    <li>Treating others with dignity and respect;</li>
+                    <li>Protecting the environment;</li>
+                    <li>Managing business with ultimate integrity and only for the benefit of Joeberg Global;</li>
+                    <li>Assuring that financial reports are accurate and safeguarding confidential information;</li>
+                    <li> Properly using and protecting company assets;</li>
+                    <li>Running business legally and honestly.</li>
+                </ol>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-container">
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fa fa-facebook-f"></i></a>
+                    <a href="https://wa.me/+2348033099465" target="_blank" class="social-icon whatsapp"><i class="fa fa-whatsapp"></i></a>
+                    <a href="mailto:joeberg4@yahoo.com" target="_blank" class="social-icon email"><i class="fa fa-envelope"></i></a>
+                    <a href="tel:+2348033099465" class="social-icon phone"><i class="fa fa-phone"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // scripts.js
+document.addEventListener("DOMContentLoaded", function() {
+    var loading = document.getElementById('loading');
+    var content = document.getElementById('content');
+
+    // Simulate a loading delay of 3 seconds
+    setTimeout(function() {
+        // Hide the loading screen
+        loading.style.display = 'none';
+        
+        // Show the main content
+        content.style.display = 'block';
+    }, 3000); // 3000 milliseconds = 3 seconds
+});
+    </script>
+
+</body>
+</html>

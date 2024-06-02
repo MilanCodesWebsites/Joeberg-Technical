@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Joeberg Global Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+</head>
+<body>
+
+    <div id="loading">
+        <div class="spinner"></div>
+        <div class="loading-bar"></div>
+    </div>
+    <div id="content">
+        <!-- Your website content goes here -->
+        <nav id="navbar">
+            <div class="logo">
+                <a href="index.html">Joeberg Technical Services</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <script>
+                const burger = document.querySelector('.burger');
+                const navLinks = document.querySelector('.nav-links');
+                const body = document.querySelector('body');
+                const backdrop = document.createElement('div');
+                backdrop.classList.add('menu-backdrop');
+            
+                body.appendChild(backdrop);
+            
+                burger.addEventListener('click', () => {
+                    navLinks.classList.toggle('nav-active');
+                    backdrop.classList.toggle('display'); // Show or hide the backdrop
+            
+                    // Toggle body scrolling
+                    body.classList.toggle('fixed-position');
+                    
+                    // Burger Animation
+                    burger.classList.toggle('toggle');
+                });
+            
+                backdrop.addEventListener('click', function() {
+                    navLinks.classList.remove('nav-active');
+                    this.classList.remove('display'); // Hide the backdrop when clicked
+                    body.classList.remove('fixed-position');
+                    burger.classList.remove('toggle');
+                });
+            </script>
+        </nav>
+        
+        <div class="videoback">
+            <video  style="opacity: 0.9;" src="imgs/background1.mp4" autoplay loop muted width="100%"></video>
+            <div class="videobacktext">
+                <br><br><br>
+                WELCOME TO JOEBERG GLOBAL SERVICES - POWERING YOUR TOUGHEST JOBS!
+                <br><br>
+                <a href="contact.html"><button class="book">VIEW OUR PRODUCTS</button></a>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="homecont">
+            <h1>- Services -</h1>
+            <div class="nailservicecont">
+        
+                <div class="nail" style="background-image: url(imgs/heavy.jpg);">
+                  <p>Heavy Duty Equipment Leasing</p>
+                </div>
+                <div class="nail" style="background-image: url(imgs/labour.jpg);">
+                  <p>Labour Supplies</p>
+                </div>
+                <div class="nail" style="background-image: url(imgs/oem.jpg);">
+                    <p>OEM Sales Representative & Procurement</p>
+                  </div>
+                <div class="nail" style="background-image: url(imgs/import.jpg);">
+                  <p>Import & Export</p>
+                </div>
+                <div class="nail" style="background-image: url(imgs/supplies.jpg);">
+                  <p>General Supplies and Contracts</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <a href="services.html"><button class="book2">Discover More</button></a>
+        
+        <div class="products">
+            <h1>- Products Overview -</h1>
+            <div class="parent">
+                <div class="grid">
+                   <div style="background-image: url(imgs/lowbed.webp); background-size: cover;" ><p>Low-Bed Trucks</p></div>
+                   <div style="background-image: url(imgs/swampbuggy.jpg); background-size: cover;" ><p>Swamp Buggy</p>   </div>
+                   <div style="background-image: url(imgs/excavator.jpg); background-size: cover;" ><p>Excavators</p>    </div>
+                   <div style="background-image: url(imgs/teflonpad.png); background-size: cover;" ><p>Teflon Pads</p>   </div>
+                   <div style="background-image: url(imgs/bearing.webp); background-size: cover;" ><p>Bearings</p>      </div>
+                   <div style="background-image: url(imgs/gasket.jpeg); background-size: cover;" ><p>Rubber Gaskets</p></div>
+                   <div style="background-image: url(imgs/sprocket.webp); background-size: cover;" ><p>Axel Sprockets</p></div>
+                   <div style="background-image: url(imgs/excavatorchain.jpg); background-size: cover;" ><p>Track Chain</p></div>
+                </div>
+            </div>
+            <a href="products.html"><button class="book3">View all Products</button></a>
+        </div>
+        
+        <div class="enquire">
+            <div class="enquireheader">
+        <h1>Partnership with the best gives you the best.</h1>
+        <p>Contact us for general inquiries.</p>
+            </div>
+            <div class="enquirebutton">
+                <br>
+                <a href="contact.html"><button class="book4">Send an enquiry</button></a>
+            </div>
+        </div>
+        
+        <div class="about">
+            <div class="aboutpic">
+                <video src="imgs/JOBERG2.mp4" width="100%" autoplay loop muted></video>
+            </div>
+            <div class="abouttext">
+                <br>
+                <h1>Joeberg at a Glance</h1>
+                <br>
+                <p>
+                    Joeberg Global Services specializes in high-quality excavators, swamp buggies, and heavy machinery. With a commitment to excellence, we provide reliable equipment and services for construction, mining, and environmental projects.
+                </p>
+                <br>
+                <p>
+                    Trust Joeberg Global Services for all your heavy-duty machinery needs.
+                </p>
+                <br>
+                <a href="about.html"><button class="book5">More About Us...</button></a>
+            </div>
+        </div>
+        
+        
+        <div class="innovation">
+            <h1>Innovation In Action</h1>
+            <br>
+            <video src="Video by Jean Pablo Silva from Pexels: https://www.pexels.com/video/excavators-destroying-an-abandoned-building-15261765/" width="90%" muted autoplay loop></video>
+        </div>
+        
+        
+        <div style="color: white; text-align: center;">
+            <br>
+            <h1>Contact Info</h1>
+            <div class="svgcont">
+            <div class="svg">
+                <img src="imgs/email-svgrepo-com.png" width="100px" alt="">
+                <br>
+                <h3 style="color: #ffd039;"><a href="mailto:joeberg4@yahoo.com">joeberg4@yahoo.com</a></h3>
+            </div>
+            <div class="svg"><img src="imgs/phone-pause-svgrepo-com.png" width="100px" alt="">
+                <br>
+                <h3 style="color: #ffd039;"><a href="tel:+2348033099465">+2348033099465</a></h3>
+            </div>
+            <div class="svg"><img src="imgs/location-sign-svgrepo-com.png" width="100px" alt="">
+                <br>
+                <h3 style="color: #ffd039;"><a href="https://maps.app.goo.gl/fENerT3xBaeHgRur5">Km 20, Airport Road, Rukpokwu, Igwuruta, Rivers State</a></h3>    
+            </div>
+            <br><br><br>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-container">
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fa fa-facebook-f"></i></a>
+                    <a href="https://wa.me/+2348033099465" target="_blank" class="social-icon whatsapp"><i class="fa fa-whatsapp"></i></a>
+                    <a href="mailto:joeberg4@yahoo.com" target="_blank" class="social-icon email"><i class="fa fa-envelope"></i></a>
+                    <a href="tel:+2348033099465" class="social-icon phone"><i class="fa fa-phone"></i></a>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+
+    <script>
+        // scripts.js
+document.addEventListener("DOMContentLoaded", function() {
+    var loading = document.getElementById('loading');
+    var content = document.getElementById('content');
+
+    // Simulate a loading delay of 3 seconds
+    setTimeout(function() {
+        // Hide the loading screen
+        loading.style.display = 'none';
+        
+        // Show the main content
+        content.style.display = 'block';
+    }, 3000); // 3000 milliseconds = 5 seconds
+});
+    </script>
+
+
+</body>
+</html>
