@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Joeberg Global Services</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+</head>
+<body>
+
+<nav id="navbar">
+    <div class="logo">
+        <a href="index.html">Joeberg Technical Services</a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.querySelector('body');
+        const backdrop = document.createElement('div');
+        backdrop.classList.add('menu-backdrop');
+    
+        body.appendChild(backdrop);
+    
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            backdrop.classList.toggle('display'); // Show or hide the backdrop
+    
+            // Toggle body scrolling
+            body.classList.toggle('fixed-position');
+            
+            // Burger Animation
+            burger.classList.toggle('toggle');
+        });
+    
+        backdrop.addEventListener('click', function() {
+            navLinks.classList.remove('nav-active');
+            this.classList.remove('display'); // Hide the backdrop when clicked
+            body.classList.remove('fixed-position');
+            burger.classList.remove('toggle');
+        });
+    </script>
+</nav>
+
+<br>
+<div class="aboutheader">
+    <h1>Services</h1>
+</div>
+
+<div class="servicecont">
+    <div class="service">
+        <img src="imgs/heavyp.jpg" width="35%" alt="">
+        <span>
+            <h3>Heavy Duty Equipment Leasing</h3>
+            <br>
+            <p>
+                Joeberg Global Services revolutionizes heavy-duty equipment leasing with top-tier machinery and flexible solutions. Empower your projects with our reliable, high-performance equipment and exceptional support, ensuring you stay ahead without the burden of ownership costs.
+            </p>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Heavy_equipment" target="_blank">Read more &#x2192;</a>
+        </span>
+    </div>
+    <br>
+
+    <div class="service">
+        <img src="imgs/labourp.jpg" width="35%" alt="">
+        <span>
+            <h3>Labour Supplies</h3>
+            <br>
+            <p>
+                Joeberg Global Services excels in labor supplies, delivering top-quality tools and safety gear right to your job site. Our reliable service ensures your team is equipped and protected, so you can focus on getting the job done efficiently and safely.
+            </p>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Personal_protective_equipment" target="_blank">Read more &#x2192;</a>
+        </span>
+    </div>
+    <br>
+
+    <div class="service">
+        <img src="imgs/oemp.jpg" width="35%" alt="">
+        <span>
+            <h3>OEM Sales Representative & Procurement</h3>
+            <br>
+            <p>
+                Joeberg Global Services streamlines your operations with our top-notch procurement services for machinery spare parts. We ensure quick and reliable access to high-quality parts, minimizing downtime and keeping your equipment running smoothly. Trust us to provide the components you need, exactly when you need them.
+            </p>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Spare_part" target="_blank">Read more &#x2192;</a>
+        </span>
+    </div>
+    <br>
+
+    <div class="service">
+        <img src="imgs/importp (1).jpg" width="35%" alt="">
+        <span>
+            <h3>Import & Export</h3>
+            <br>
+            <p>
+                Joeberg Global Services simplifies global trade with our expert import and export services. We handle the complexities of international logistics, ensuring your goods move seamlessly across borders. Rely on our experience to navigate customs, compliance, and shipping, so your business can thrive in the global market.
+            </p>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Import_and_export" target="_blank">Read more &#x2192;</a>
+        </span>
+    </div>
+    <br>
+
+    <div class="service">
+        <img src="imgs/contractp.jpg" width="35%" alt="">
+        <span>
+            <h3>General Supplies & Contracts</h3>
+            <br>
+            <p>
+                Joeberg Global Services simplifies global trade with our expert import and export services. We handle the complexities of international logistics, ensuring your goods move seamlessly across borders. Rely on our experience to navigate customs, compliance, and shipping, so your business can thrive in the global market.
+            </p>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Contract" target="_blank">Read more &#x2192;</a>
+        </span>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://wa.me/+2348033099465" target="_blank" class="social-icon whatsapp"><i class="fa fa-whatsapp"></i></a>
+            <a href="mailto:joeberg4@yahoo.com" target="_blank" class="social-icon email"><i class="fa fa-envelope"></i></a>
+            <a href="tel:+2348033099465" class="social-icon phone"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
