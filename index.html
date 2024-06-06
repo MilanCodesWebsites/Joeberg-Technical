@@ -9,7 +9,57 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: grab;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            overflow: hidden;
+            margin-top: 150px;
+        }
+        .marquee {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        .marquee img {
+            height: 80px;
+            margin: 0 20px;
+            transition: transform 0.2s;
+        }
+        .marquee img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .marquee-container{
+                margin-top: 300px;
+                margin-bottom: 200px;
+                height: 400px;
+            }
+            .marquee-content{
+            padding-top: 300px;
+            }
+        }
         </style>
+
 </head>
 <body>
 
@@ -96,7 +146,7 @@
               </div>
             </div>
         </div>
-<!--         <a href="services.html"><button class="book2">Discover More</button></a> -->
+        <!-- <a href="services.html"><button class="book2">Discover More</button></a> -->
         
         <div class="products">
             <h1>- Products Overview -</h1>
@@ -144,13 +194,87 @@
                 <br>
                 <a href="about.html"><button class="book5">More About Us...</button></a>
             </div>
+            
+        </div>
+
+        
+    
+        <div class="marquee-container" id="marquee">
+            
+            <div class="marquee">
+                
+                <div class="marquee-content">
+                    <img src="imgs/skf.png" alt="SKF">
+                    <img src="imgs/cat.png" alt="CAT">
+                    <img src="imgs/lovejoy.jpg" alt="Lovejoy">
+                    <img src="imgs/wilco.png" alt="WILCO">
+                    <img src="imgs/fleetguard.png" alt="Fleetguard">
+                    <img src="imgs/bosch.png" alt="BOSCH">
+                    <img src="imgs/perkins.png" alt="Perkins">
+                    <img src="imgs/timken_Overview_video-854x480-c-default.jpg" alt="TIMKEN">
+                    <img src="imgs/johncrane.jpg" alt="John Crane">
+                    <img src="imgs/beta.png" alt="Beta">
+                </div>
+            </div>
+           
         </div>
         
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       
+        <script>
+            // Make marquee content draggable
+            const marqueeContainer = document.getElementById('marquee');
+            const marqueeContent = marqueeContainer.querySelector('.marquee-content');
+            let isDragging = false;
+            let startX;
+            let scrollLeft;
+        
+            marqueeContainer.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                marqueeContainer.style.cursor = 'grabbing';
+                startX = e.pageX - marqueeContainer.offsetLeft;
+                scrollLeft = marqueeContainer.scrollLeft;
+            });
+        
+            marqueeContainer.addEventListener('mouseleave', () => {
+                isDragging = false;
+                marqueeContainer.style.cursor = 'grab';
+            });
+        
+            marqueeContainer.addEventListener('mouseup', () => {
+                isDragging = false;
+                marqueeContainer.style.cursor = 'grab';
+            });
+        
+            marqueeContainer.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - marqueeContainer.offsetLeft;
+                const walk = (x - startX) * 5; // Adjust the scrolling speed
+                marqueeContainer.scrollLeft = scrollLeft - walk;
+            });
+        
+            // Add touch events for mobile devices
+            marqueeContainer.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].pageX - marqueeContainer.offsetLeft;
+                scrollLeft = marqueeContainer.scrollLeft;
+            });
+        
+            marqueeContainer.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        
+            marqueeContainer.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const x = e.touches[0].pageX - marqueeContainer.offsetLeft;
+                const walk = (x - startX) * 5; // Adjust the scrolling speed
+                marqueeContainer.scrollLeft = scrollLeft - walk;
+            });
+        </script>
+        
         
         
         <div style="color: white; text-align: center;">
+            
             <br>
             <h1>Contact Info</h1>
             <div class="svgcont">
